@@ -1,5 +1,4 @@
 from django.http import HttpResponse
-from django.views.generic import View
 from django.views.generic import TemplateView
 
 #  FBV
@@ -10,11 +9,12 @@ from django.views.generic import TemplateView
 # def hello_world(request):
 #     return HttpResponse('Hello World')
 
-def check_kwargs(request,**kwargs):
-    return HttpResponse(f'kwargs:<br>{kwargs}')
+
+def check_kwargs(request, **kwargs):
+    return HttpResponse(f"kwargs:<br>{kwargs}")
 
 
-#CBV
+# CBV
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
 
@@ -37,7 +37,3 @@ class DocSitePageView(TemplateView):
 
 class LoginPageView(TemplateView):
     template_name = "mainapp/login.html"
-
-
-
-
