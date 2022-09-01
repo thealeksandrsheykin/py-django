@@ -1,21 +1,6 @@
-from django.http import HttpResponse
-from django.views.generic import TemplateView
-
-#  FBV
-# from django.shortcuts import render
-
-# # Create your views here.
-
-# def hello_world(request):
-#     return HttpResponse('Hello World')
-
-
-def check_kwargs(request, **kwargs):
-    return HttpResponse(f"kwargs:<br>{kwargs}")
-
-
-# CBV
 from datetime import datetime
+
+from django.views.generic import TemplateView
 
 
 class MainPageView(TemplateView):
