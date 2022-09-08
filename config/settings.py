@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "social_django",
     "mainapp",
     "authapp",
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,6 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = "config.wsgi.application"
 
 
@@ -111,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = "authapp.CustomUser"
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -156,5 +155,7 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
 )
 
-SOCIAL_AUTH_GITHUB_KEY = "17f05bd4e2ea3a2acb41"
-SOCIAL_AUTH_GITHUB_SECRET = "d83039edc40bec3107ef6294f3ff2b102552ee6d"
+SOCIAL_AUTH_GITHUB_KEY = "6db4a8828f818ddf01e6"
+SOCIAL_AUTH_GITHUB_SECRET = "ca47085f5413ee503bec0b4c585b8a7bf8096904"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
